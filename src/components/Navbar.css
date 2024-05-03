@@ -1,0 +1,43 @@
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2rem 0;
+  background-color: black;
+  border-right: 1px solid lightgray;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 2rem;
+}
+
+.icons-container img {
+  margin-top: 1rem;
+}
+
+.links-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  width: 100%;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s;
+}
+
+.nav-link p {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+
+.nav-link:hover {
+  /* color: rgb(147, 43, 44); */
+  background-color: rgb(147, 43, 44);
+}
