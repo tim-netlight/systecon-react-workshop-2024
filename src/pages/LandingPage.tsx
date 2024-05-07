@@ -6,7 +6,7 @@ export default function LandingPage(): JSX.Element {
 
   return (
     <div className="container">
-      <h1 className="navbar-title">Systecon React Workshop 2024</h1>
+      <h1 className="page-title">Systecon React Workshop 2024</h1>
       <div className="row">
         <Profile name={name} age={30} city="Uppsala" />
         <div className="col" style={{ marginLeft: '1rem' }}>

@@ -35,9 +35,19 @@ body {
 
 input {
   max-width: 300px;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: 1px solid white;
+  padding: 1rem;
+  border: 2px solid #9d8dff;
+  outline: none;
+  transition: all 0.3s;
+
+  color: white;
+  font-size: 20px;
+  font-family: 'Source Code Pro', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+input:active, input:focus {
+  color: black;
+  background-color: #9d8dff;
 }
 
 .row {
