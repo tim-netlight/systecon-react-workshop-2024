@@ -1,18 +1,19 @@
-export interface CostPoint {
-  effectiveness: string
-  cost: string
-}
+import { User } from '../models/User'
 
-export interface CostPointDTO {
-  data: CostPoint[]
-}
-
-// TODO: Create some nice data source
-export const getCostData = async (): Promise<CostPointDTO> => {
-  return await fetch('../../data.json')
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data)
-      return data
+async function get<T>(url: string): Promise<T> {
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(response.statusText)
+      }
+      return response.json() as Promise<T>
     })
+    .catch((error) => {
+      console.error(error)
+      throw new Error(error)
+    })
+}
+
+export const getUsers = async (): Promise<User[]> => {
+  return await get<User[]>('https://jsonplaceholder.typicode.com/users')
 }

@@ -2,15 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
-import { DataProvider } from './context/DataContext.tsx'
+import { UserProvider } from './context/UserContext.tsx'
 import './index.css'
+import ErrorPage from './pages/ErrorPage.tsx'
 import LandingPage from './pages/LandingPage.tsx'
-import SecondPage from './pages/SecondPage.tsx'
+import UserListPage from './pages/UserListPage.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
@@ -18,7 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'second',
-        element: <SecondPage />,
+        element: (
+          <UserProvider>
+            <UserListPage />
+          </UserProvider>
+        ),
       },
     ],
   },
@@ -26,8 +32,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <DataProvider>
-      <RouterProvider router={router} />
-    </DataProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 )

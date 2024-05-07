@@ -1,7 +1,7 @@
 .navbar-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  position: sticky;
   padding: 2rem 0;
   background-color: black;
   border-right: 1px solid lightgray;
@@ -38,6 +38,5 @@
 
 
 .nav-link:hover {
-  /* color: rgb(147, 43, 44); */
   background-color: rgb(147, 43, 44);
 }
