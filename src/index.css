@@ -64,6 +64,10 @@ input:active, input:focus {
 h2, h3, h4, h5, h6, p {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+}
 /* 
 :root {
   line-height: 1.5;

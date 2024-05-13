@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import UserCard from '../components/UserCard'
 import { useUsers } from '../context/UserContext'
 import ErrorPage from './ErrorPage'
@@ -18,7 +19,11 @@ const UserListPage = (): JSX.Element => {
     <div className="container">
       <h1 className="page-title">User List Page</h1>
       {users.map((user) => {
-        return <UserCard key={user.id} user={user} />
+        return (
+          <Link key={user.id} to={user.id.toString()}>
+            <UserCard user={user} />
+          </Link>
+        )
       })}
     </div>
   )

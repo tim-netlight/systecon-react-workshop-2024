@@ -6,6 +6,7 @@ import { UserProvider } from './context/UserContext.tsx'
 import './index.css'
 import ErrorPage from './pages/ErrorPage.tsx'
 import LandingPage from './pages/LandingPage.tsx'
+import UserDetailsPage from './pages/UserDetailsPage.tsx'
 import UserListPage from './pages/UserListPage.tsx'
 
 const router = createBrowserRouter([
@@ -16,16 +17,29 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        index: true,
         element: <LandingPage />,
       },
       {
-        path: 'second',
+        path: 'users',
         element: (
           <UserProvider>
             <UserListPage />
           </UserProvider>
         ),
       },
+      {
+        path: 'users/:userId',
+        element: (
+          <UserProvider>
+            <UserDetailsPage />
+          </UserProvider>
+        ),
+      },
+      // {
+      //   path: '*',
+      //   element: <ErrorPage message="404 - Address not found!" />,
+      // },
     ],
   },
 ])

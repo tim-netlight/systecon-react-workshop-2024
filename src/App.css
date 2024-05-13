@@ -27,3 +27,17 @@ main {
   height: 4px;
   background-color: #9d8dff;
 }
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
