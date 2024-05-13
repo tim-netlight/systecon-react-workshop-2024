@@ -6,6 +6,12 @@
   background-color: black;
   color: white;
   white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.user-card:hover {
+  transform: scale(1.02);
+  opacity: 0.8;
 }
 
 .user-card-id {
