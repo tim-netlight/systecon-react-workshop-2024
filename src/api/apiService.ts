@@ -14,6 +14,9 @@ async function get<T>(url: string): Promise<T> {
     })
 }
 
+/*
+ * To be used in exercise 2
+ */
 export const getUsers = async (): Promise<User[]> => {
   return await get<User[]>('https://jsonplaceholder.typicode.com/users')
 }

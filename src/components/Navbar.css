@@ -34,9 +34,11 @@
 .nav-link p {
   width: 100%;
   margin-left: 1rem;
+  font-weight: bold;
 }
 
 
 .nav-link:hover {
   background-color: rgb(147, 43, 44);
+  transform: scale(1.03);
 }
