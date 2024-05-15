@@ -1,4 +1,6 @@
-export default function LandingPage(): JSX.Element {
+const LandingPage = (): JSX.Element => {
+  // Add state for the nameInput
+
   return (
     <div className="container">
       <h1 className="page-title">Systecon React Workshop 2024</h1>
@@ -9,3 +11,5 @@ export default function LandingPage(): JSX.Element {
     </div>
   )
 }
+
+export default LandingPage
