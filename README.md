@@ -44,7 +44,7 @@ Keywords: useEffect, Promise
 
 Add a new route to the `UserDetailsPage`. This page should be reached when you click on one of the users in `UserListPage` and there see more information about that specific user. Update the `UserDetailsPage` so that it takes in user data as Props and displays it in on the user page.
 
-Keywords: Route, onClick, props
+Keywords: Route, Link, Outlet, Props
 
 ### Step 3: Create a Context
 
@@ -77,3 +77,17 @@ Next up, add an e2e test that performs the following steps:
 Keywords: Playwright
 
 ## Resources
+
+#### For Web Development & React
+W3Schools: https://www.w3schools.com/​ \
+CSS-Tricks: https://css-tricks.com/​ \
+Mozilla: https://developer.mozilla.org/en-US/docs/Web/JavaScript​ \
+React: https://react.dev/​ \
+TypeScript: https://www.typescriptlang.org/docs/ 
+
+#### For Testing
+Vitest: https://vitest.dev/api/ \
+React Testing Library: https://testing-library.com/docs/react-testing-library/intro/ \
+Playwright: https://playwright.dev/docs/intro \
+Cypress: https://docs.cypress.io/guides/overview/why-cypress
+
